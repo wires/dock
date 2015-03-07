@@ -126,3 +126,11 @@ Make OSX resolve all `.dev` domains using our local DNS server ([details](http:/
 	sudo mkdir -p /etc/resolver
 	echo nameserver 127.0.0.1 >> /tmp/deans
 	sudo mv /tmp/devns /etc/resolver/dev
+	
+# References/acknowledgements
+
+This library uses
+
+- the [docker remote API](https://docs.docker.com/reference/api/docker_remote_api_v1.15/#list-containers)
+- [NodeJS bindings](https://github.com/mafintosh/docker-remote-api) by *mafintosh*
+- Tool to get [DOCKER_HOST](https://github.com/mafintosh/docker-host) also by *mafintosh*
