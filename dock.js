@@ -1,4 +1,5 @@
 var argv = require('minimist')(process.argv.slice(2));
+var pp = require('prettyjson');
 
 // URL parsing
 var url = require("url");
@@ -10,7 +11,7 @@ var httpProxy = require('http-proxy');
 // set the docker host from DOCKER_HOST env variable
 var DOCKER_HOST = require('docker-host')();
 var host = DOCKER_HOST.host || 'localhost';
-console.log('DOCKER HOST =>', host);
+console.log('DOCKER HOST =>\n\t' + pp.render(DOCKER_HOST).replace('\n','\n\t') + '\n');
 
 // current known containers
 var state = {
